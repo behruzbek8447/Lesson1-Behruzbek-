@@ -1,59 +1,75 @@
-body {
+/* Reset */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(to right, #4facfe, #00f2fe);
-    color: white;
-    overflow-x: hidden;
-}
-
-header {
-    text-align: center;
-    padding: 80px 20px;
-    animation: fadeIn 2s ease-in-out;
-}
-
-header h1 {
-    font-size: 3rem;
-    margin: 0;
-    animation: slideDown 1.5s ease-in-out;
-}
-
-header p {
-    font-size: 1.2rem;
-    margin-top: 10px;
-    animation: fadeIn 3s ease-in-out;
-}
-
-.gallery {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: white;
     padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    width: 350px;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
-.card {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    padding: 20px;
-    width: 250px;
+h2 {
     text-align: center;
-    backdrop-filter: blur(10px);
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
-    animation: fadeUp 2s ease-in-out;
+    margin-bottom: 20px;
+    color: #333;
 }
 
-.card:hover {
-    transform: translateY(-10px) scale(1.05);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+.input-group {
+    margin-bottom: 15px;
 }
 
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #4facfe;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #4facfe;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #00c6fb;
+}
+
+/* Animations */
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes slideDown {
-    from { transform: translateY(-50px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
